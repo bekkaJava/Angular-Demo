@@ -1,0 +1,22 @@
+
+
+<ul *ngFor="let person of data">
+
+    <li> {{person.firstName + ' ' + person.lastName + ' ' + person.email}}</li>
+
+    <button (click)="delete(person.id)">Delete</button>
+
+    <button (click)="edit(person.id)">Edit</button>
+    
+</ul>
+
+
+
+
+<ng-container *ngIf="currentPerson">
+
+    <app-person-edit [person]="currentPerson" 
+
+    (submitt)="updateData($event)"></app-person-edit>
+
+</ng-container>

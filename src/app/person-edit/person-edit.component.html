@@ -1,0 +1,40 @@
+<p>Person Edit</p>
+
+
+<form [formGroup]="form" class="container form" autocomplete="off">
+
+    <div class="item labe">
+        firstName
+    </div>
+
+    <input type="text" formControlName="firstName">
+
+
+
+    <div class="item labe">
+        lastName
+    </div>
+
+    <input type="text" formControlName="lastName">
+
+
+
+    <div class="item labe">
+        age
+    </div>
+
+    <input type="text" style="display: block;" formControlName="age">
+
+
+    <div class="item labe" style="display: block;">
+        email
+    </div>
+
+    <input formControlName="email" type="text" style="display: block; margin-bottom: 5px; ">
+
+
+    <button (click)="submitClick()">Submit</button>
+    <button>Cancel</button>
+
+
+</form>
